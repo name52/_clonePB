@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PB 클론코딩~! 파리바게트로 flex 이해하기~! 파리바게트만 제대로 이해했다면 flex 독파!</title>
+  <!-- cdn font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  
+  <!-- 라이브러리 css -->
+  <link rel="stylesheet" href="./assets/css/libs/slick.css">
+  <!-- 개인 스타일 -->
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/pb_style.css">
+
+  <!-- 라이브러리 -->
+  <script src="./assets/js/libs/jquery-3.6.0.min.js"></script>
+  <script src="./assets/js/libs/slick.min.js"></script>
+  <!-- 개인 스크립트 -->
+  <script src="./assets/js/script.js"></script>
+</head>
+<body>
+  <header class="hd">
+    <div class="inner">
+      <nav>
+        <h1 class="logo">
+          <a href="#" target="_blank">
+            <img src="./assets/images/pb_logo.svg" alt="파리바게트 로고">
+          </a>
+        </h1>
+        <!-- //logo -->
+        <div class="gnb">
+          <div class="gnb-left">
+            <ul>
+              <li class="dep1"><a href="#">PB MAGINE</a></li>
+              <li class="dep1"><a href="#">PB STORY</a></li>
+              <li class="dep1"><a href="#">PRODUCTS</a></li>
+            </ul>
+          </div>
+          <!-- //gnb-left -->
+          <div class="gnb-right">
+            <ul>
+              <li class="dep1"><a href="//www.naver.com">STORE</a></li>
+              <li class="dep1"><a href="#">DELIVERY</a></li>
+              <li class="dep1"><a href="#">PROMOTION</a></li>
+            </ul>
+          </div>
+          <!-- //gnb-right -->
+        </div>
+        <!-- //gnb -->
+      </nav>
+    </div>
+  </header>
+  <!-- //hd -->
+  <section class="kv">
+    <div class="kv-slide">
+      <div class="kv-slide-item"><a href="#" target="_blank"><img src="./assets/images/pb_kv0.jpg" alt="이벤트0"></a></div>
+      <div class="kv-slide-item"><a href="#" target="_blank"><img src="./assets/images/pb_kv1.jpg" alt="이벤트1"></a></div>
+      <div class="kv-slide-item"><a href="#" target="_blank"><img src="./assets/images/pb_kv2.jpg" alt="이벤트2"></a></div>
+      <div class="kv-slide-item"><a href="#" target="_blank"><img src="./assets/images/pb_kv3.jpg" alt="이벤트3"></a></div>
+    </div>
+  </section>
+  <!-- //kv -->
+  <section class="content magazine">
+    <div class="inner">
+      <div class="sec-header">
+        <h2 class="main-tit">pb magazine</h2>
+        <a href="#" target="_blank" class="btn btn-more" title="더보기">
+          <span>SHOW MORE</span>
+        </a>
+      </div>
+      <!-- //sec-header -->
+      <div class="sec-body">
+        <ul class="magine-list">
+          <li class="list-item">
+            <a href="#" target="_blank">
+              <div class="img-area">
+                <img src="./assets/images/thum-magine1.jpg" alt="섬네일1">
+              </div>
+              <div class="txt-area">
+                <h3 class="txt-tit">논산 딸기</h3>
+                <div class="txt-desc">논산딸기와 함께한 우리 모두가 행복한 생생 프로젝트</div>
+              </div>
+            </a>
+          </li>
+          <li class="list-item">
+            <a href="#" target="_blank">
+              <div class="img-area">
+                <img src="./assets/images/thum-magine1.jpg" alt="섬네일1">
+              </div>
+              <div class="txt-area">
+                <h3 class="txt-tit">논산 딸기</h3>
+                <div class="txt-desc">논산딸기와 함께한 우리 모두가 행복한 생생 프로젝트</div>
+              </div>
+            </a>
+          </li>
+          <li class="list-item">
+            <a href="#" target="_blank">
+              <div class="img-area">
+                <img src="./assets/images/thum-magine2.jpg" alt="섬네일2">
+              </div>
+              <div class="txt-area">
+                <h3 class="txt-tit">제주도 구좌 당근</h3>
+                <div class="txt-desc">구좌당근과 함께한 우리 모두가 행복한 생생 프로젝트</div>
+              </div>
+            </a>
+          </li>
+          <li class="list-item">
+            <a href="#" target="_blank">
+              <div class="img-area">
+                <img src="./assets/images/thum-magine3.jpg" alt="섬네일3">
+              </div>
+              <div class="txt-area">
+                <h3 class="txt-tit">강원도 감자빵</h3>
+                <div class="txt-desc">지역농가와 우리 모두가 행복한 상생 프로젝트</div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- //sec-body -->
+    </div>
+  </section>
+  <!-- //magazine -->
+  <section class="content story">
+    <div class="inner">
+      <div class="sec-header">
+        <h2 class="main-tit">pb story</h2>
+        <a href="#" target="_blank" class="btn btn-more" title="더보기">
+          <span>SHOW MORE</span>
+        </a>
+      </div>
+      <!-- //sec-header -->
+      <div class="sec-body">
+        <ul class="story-list">
+          <li class="list-item">
+            <div class="img-area">
+              <img src="//via.placeholder.com/600x600/999999?text=Story" alt="스토리 섬네일1">
+            </div>
+            <!-- //img-area -->
+            <div class="txt-area">
+              <div class="txt-label">
+                <span>bread video</span>
+              </div>
+              <div class="txt-tit">
+                <strong>요리용디X정통 짜장면</strong>
+              </div>
+              <div class="txt-desc">
+                <p>짜장의 달인으로 변신한 용디가 파바 정통 짜장면과 정면 승부를?!</p>
+              </div>
+              <div class="txt-date">
+                <span>2021-09-13</span>
+              </div>
+            </div>
+            <!-- //txt-area -->
+          </li>
+          <li class="list-item">
+            <div class="img-area">
+              <img src="//via.placeholder.com/600x600/999999?text=Story" alt="스토리 섬네일2">
+            </div>
+            <!-- //img-area -->
+            <div class="txt-area">
+              <div class="txt-label">
+                <span>bread video</span>
+              </div>
+              <div class="txt-tit">
+                <strong>요리용디X정통 짜장면</strong>
+              </div>
+              <div class="txt-desc">
+                <p>짜장의 달인으로 변신한 용디가 파바 정통 짜장면과 정면 승부를?!</p>
+              </div>
+              <div class="txt-date">
+                <span>2021-09-13</span>
+              </div>
+            </div>
+            <!-- //txt-area -->
+          </li>
+          <li class="list-item">
+            <div class="img-area">
+              <img src="//via.placeholder.com/600x600/999999?text=Story" alt="스토리 섬네일3">
+            </div>
+            <!-- //img-area -->
+            <div class="txt-area">
+              <div class="txt-label">
+                <span>bread video</span>
+              </div>
+              <div class="txt-tit">
+                <strong>요리용디X정통 짜장면</strong>
+              </div>
+              <div class="txt-desc">
+                <p>짜장의 달인으로 변신한 용디가 파바 정통 짜장면과 정면 승부를?!</p>
+              </div>
+              <div class="txt-date">
+                <span>2021-09-13</span>
+              </div>
+            </div>
+            <!-- //txt-area -->
+          </li>
+          <li class="list-item">
+            <div class="img-area">
+              <img src="//via.placeholder.com/600x600/999999?text=Story" alt="스토리 섬네일4">
+            </div>
+            <!-- //img-area -->
+            <div class="txt-area">
+              <div class="txt-label">
+                <span>bread video</span>
+              </div>
+              <div class="txt-tit">
+                <strong>요리용디X정통 짜장면</strong>
+              </div>
+              <div class="txt-desc">
+                <p>짜장의 달인으로 변신한 용디가 파바 정통 짜장면과 정면 승부를?!</p>
+              </div>
+              <div class="txt-date">
+                <span>2021-09-13</span>
+              </div>
+            </div>
+            <!-- //txt-area -->
+          </li>
+        </ul>
+      </div>
+      <!-- //sec-body -->
+    </div>
+
+  </section>
+  <section class="content promotion">
+    <div class="inner">
+      <div class="sec-header">
+        <h2 class="main-tit">promotion</h2>
+        <a href="#" target="_blank" class="btn btn-more" title="더보기">
+          <span>SHOW MORE</span>
+        </a>
+      </div>
+      <!-- //sec-header -->
+      <div class="sec-body"></div>
+      <!-- //sec-body -->
+    </div>
+
+  </section>
+  <section class="content product">
+    <div class="inner">
+      <div class="sec-header">
+        <h2 class="main-tit">products</h2>
+        <a href="#" target="_blank" class="btn btn-more" title="더보기">
+          <span>SHOW MORE</span>
+        </a>
+      </div>
+      <!-- //sec-header -->
+      <div class="sec-body"></div>
+      <!-- //sec-body -->
+    </div>
+
+  </section>
+  <section class="content insta">
+    <div class="inner">
+      <h2 class="main-tit">pb instagram</h2>
+
+    </div>
+    <!-- //sec-header -->
+    <div class="sec-body"></div>
+    <!-- //sec-body -->
+  </section>
+</body>
+</html>
