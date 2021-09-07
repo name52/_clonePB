@@ -90,5 +90,3 @@ input:-webkit-autofill {-webkit-text-fill-color: #000; }
 .sr-only { -webkit-box-sizing: content-box; box-sizing: content-box; position: absolute; text-indent: -9999px; z-index: -1; display: inline-block; overflow: hidden; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; padding: 0; word-break: keep-all; white-space: nowrap; border: 0; color: transparent; font: 0/0 a; height: 0; }
 .hide-text { color: transparent; border: none; background-color: transparent; text-shadow: none; font: 0/0 a; }
 
-/* fontset */
-.font-mont { font-family: 'Montserrat', 'Noto Sans KR', sans-serif; }
