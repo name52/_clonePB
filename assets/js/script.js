@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function () {
   // 초기화
   resizeSlickArrow();
 
@@ -9,6 +9,19 @@ $(document).ready(function(){
     slidesToShow: 3,
     // slidesToScroll: 3, // 이거 문제내야지~! PB처럼 하려면 어떻게 바꿔야하는지~! 
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 980,
+        settings: {
+          slidesToShow: 2,
+        }
+      },{
+        breakpoint: 500,
+        settings: {
+          slidesToShow: 1,
+        }
+      }
+    ]
   });
 
   // promotion-slide
@@ -21,18 +34,57 @@ $(document).ready(function(){
 
   // product-slide
   $('.product .slider').slick({
-    infinite: false,
+    infinite: true,
     slidesToShow: 5,
-    slidesToScroll: 1,
+    // slidesToScroll: 1,
+    // variableWidth: true,
+    // swipeToSlide: true,
+    responsive: [{
+
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+      }
+
+    }, {
+
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        dots: true
+      }
+
+    }, {
+
+      breakpoint: 300,
+      settings: "unslick" // destroys slick
+
+    }]
   });
 
+  // https://github.com/kenwheeler/slick/issues/3282 [mobile first]
+  $('.magazine .slider').slick({
+    mobileFirst: true,
+    slidesToShow: 1,
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+        }
+      }, {
+        breakpoint: 980,
+        settings: "unslick" // destroys slick
+      }
+    ]
+  });
 
-  $('.promotion .slider').on('setPosition', function(event, slick) {
+  $('.promotion .slider').on('setPosition', function (event, slick) {
     console.log('상태변경');
     resizeSlickArrow();
   });
 
-  $('.product .slider').on('setPosition', function(event, slick) {
+  $('.product .slider').on('setPosition', function (event, slick) {
     console.log('상태변경');
     resizeSlickArrow();
   });
@@ -46,7 +98,7 @@ $(document).ready(function(){
   // 기존에 마련되어있는 판에서 노는 것이 아닌, 새로 만들어진 정보에서 또 놀고 싶을때 -> 동적 이벤트를 바인딩 시켜야한다~! (on 메소드와 click 메소드)
   // $('.toggle-menu').on('click', '이벤트를 물려받을 아이', function(){});
 
-  $('.toggle-menu').click(function(){
+  $('.toggle-menu').click(function () {
     $(this).toggleClass('active');
     $('.hd .mob-gnb').toggleClass('active');
   });
@@ -63,7 +115,7 @@ $(document).ready(function(){
   // [jQuery hash 예제](https://jjeongil.tistory.com/1054)
   // [location.hash](https://webroadcast.tistory.com/1)
 
-  $('a[href^="#"]').on('click',function (e) {
+  $('a[href^="#"]').on('click', function (e) {
     e.preventDefault();
 
     var target = this.hash;
@@ -71,7 +123,7 @@ $(document).ready(function(){
     // resize 할때 요소 높이 구하기
 
     $('html, body').stop().animate({
-        'scrollTop': $target.offset().top - headerHeight
+      'scrollTop': $target.offset().top - headerHeight
     }, 900, 'swing');
 
     /* (나중에 js 나갈때 왜 그런지 아직은 시기상조... 정말...) scrollIntoview 에러 설명해주기: https://stackoverflow.com/questions/20931368/scrollintoview-is-not-a-function-upon-page-load
@@ -98,9 +150,11 @@ $(document).ready(function(){
   var resizeTimer = null;
   var headerHeight = null;
 
-  $(window).resize(function(){
-    clearTimeout( resizeTimer );
-    resizeTimer = setTimeout( resizeDone, resizeDelay );
+  $(window).resize(function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(resizeDone, resizeDelay);
+
+    // $('.magazine .slider').slick('resize');
   });
 
   function resizeDone() {
@@ -110,6 +164,8 @@ $(document).ready(function(){
     // console.log('nav 높이 = ', headerHeight);
     resizeElem();
     // resizeSlickArrow();
+    $('.magazine .slider').slick('resize');
+
   }
   function resizeElem() {
     // 리사이즈가 수행됐을때 해야하는 것 작성
@@ -127,7 +183,7 @@ $(document).ready(function(){
     console.log('resize kv=', pdSlideHieght);
     console.log('resize kv=', pmSlideHeight);
 
-    $('.product .slider .slick-arrow').css({'top': pdSlideHieght / 2});
-    $('.promotion .slider .slick-arrow').css({'top': pmSlideHeight / 2});
+    $('.product .slider .slick-arrow').css({ 'top': pdSlideHieght / 2 });
+    $('.promotion .slider .slick-arrow').css({ 'top': pmSlideHeight / 2 });
   }
 });
