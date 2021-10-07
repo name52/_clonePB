@@ -1,206 +1,180 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PB 클론코딩~! 파리바게트로 flex 이해하기~! 파리바게트만 제대로 이해했다면 flex 독파!</title>
-  <!-- cdn font -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
-    rel="stylesheet">
-  <!-- 라이브러리 css -->
+  <meta name="viewport" content="width=`, initial-scale=1.0">
+  <title>파리바게트 클론코딩 시작</title>
+
+  <!-- 폰트 -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
+
+  <!-- css-library -->
   <link rel="stylesheet" href="./assets/css/libs/slick.css">
-  <!-- 개인 스타일 -->
+
+  <!-- css -->
   <link rel="stylesheet" href="./assets/css/reset.css">
-  <link rel="stylesheet" href="./assets/css/font.css">
-  <link rel="stylesheet" href="./assets/css/pb_style.css">
+  <link rel="stylesheet" href="./assets/css/fonts.css">
+  <link rel="stylesheet" href="./assets/css/style.css?1">
 
-  <!-- 라이브러리 -->
-  <script src="./assets/js/libs/jquery-3.6.0.min.js"></script>
-  <script src="./assets/js/libs/slick.min.js"></script>
-  <!-- 개인 스크립트 -->
+  <!-- library -->
+  <script src="./assets/js/libs/jquery-3.6.0.js"></script>
+  <!-- <script src="./assets/js/libs/slick.js"></script> -->
+  <!-- <script src="./assets/js/libs/slick.min.js"></script> -->
+  <!-- <script src="./assets/js/libs/slick-2.min.js"></script> -->
+  <!-- [NOTE] 이전 파일 다운로드로 받은 slick 버전은 1.6버전(낮은버전)이므로 높은버전 1.8버전으로 업데이트 필요 -->
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <!-- js -->
   <script src="./assets/js/script.js"></script>
-</head>
 
+</head>
 <body>
+  <!-- header -->
   <header class="hd">
     <div class="inner">
+      <h1 class="logo">
+        <a href="#" target="_blank">
+          <img src="./assets/images/pb_logo.svg" alt="파리바게트">
+        </a>
+      </h1>
+      <!-- //logo -->
       <nav>
-        <h1 class="logo">
-          <a href="#" target="_blank">
-            <img src="./assets/images/pb_logo.svg" alt="파리바게트 로고">
-          </a>
-        </h1>
-        <!-- //logo -->
         <div class="gnb pc-gnb">
           <div class="gnb-left">
             <ul>
-              <li class="dep1"><a href="#magazine">PB MAGINE</a></li>
-              <li class="dep1"><a href="#story">PB STORY</a></li>
-              <li class="dep1"><a href="#product">PRODUCTS</a></li>
+              <li class="dep1"><a id="test" href="#tmp1">PB magazine</a></li>
+              <li class="dep1"><a href="#tmp2">PB story</a></li>
+              <li class="dep1"><a href="#tmp3">pb product</a></li>
             </ul>
           </div>
           <!-- //gnb-left -->
           <div class="gnb-right">
             <ul>
-              <li class="dep1"><a href="//www.naver.com">STORE</a></li>
-              <li class="dep1"><a href="//www.google.com">DELIVERY</a></li>
-              <li class="dep1"><a href="#promotion">PROMOTION</a></li>
+              <li class="dep1"><a href="#">store</a></li>
+              <li class="dep1"><a href="#">delivery</a></li>
+              <li class="dep1"><a href="#tmp4">promotion</a></li>
             </ul>
           </div>
           <!-- //gnb-right -->
         </div>
-        <!-- //gnb(pc) -->
+      </nav>
+      <nav>
         <div class="gnb mob-gnb">
           <div class="gnb-box">
-            <div class="gnb-body">
-              <ul>
-                <li class="dep1"><a href="#">PB MAGINE</a></li>
-                <li class="dep1"><a href="#">PB STORY</a></li>
-                <li class="dep1"><a href="#">PRODUCTS</a></li>
-                <li class="dep1"><a href="//www.naver.com">STORE</a></li>
-                <li class="dep1"><a href="#">DELIVERY</a></li>
-                <li class="dep1"><a href="#">PROMOTION</a></li>
-              </ul>
-            </div>
-            <!-- //gnb-body -->
+            <ul>
+              <li class="dep1"><a href="#tmp1">모바일메뉴1</a></li>
+              <li class="dep1"><a href="#tmp2">모바일메뉴2</a></li>
+              <li class="dep1"><a href="#tmp3">모바일메뉴3</a></li>
+              <li class="dep1"><a href="#">모바일메뉴4</a></li>
+              <li class="dep1"><a href="#">모바일메뉴5</a></li>
+              <li class="dep1"><a href="#tmp4">모바일메뉴6</a></li>
+            </ul>
           </div>
         </div>
-        <!-- //gnb(mob) -->
-        <div class="toggle-menu">
-          <button>
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
-        <!-- //toggle-menu -->
       </nav>
+      <!-- //nav -->
+      <!-- toggle버튼 -->
+      <div class="toggle-menu">
+        <div>
+          <span class="bar bar1"></span>
+          <span class="bar bar2"></span>
+          <span class="bar bar3"></span>
+        </div>
+      </div>
+      <!-- <div class="toggle-menu">
+        <button>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div> -->
     </div>
   </header>
-  <!-- //hd -->
-  <section class="kv">
-    <div class="slider">
-      <div class="list-item"><a href="#" target="_blank"><img src="./assets/images/pb_kv0.jpg" alt="이벤트0"></a></div>
-      <div class="list-item"><a href="#" target="_blank"><img src="./assets/images/pb_kv1.jpg" alt="이벤트1"></a></div>
-      <div class="list-item"><a href="#" target="_blank"><img src="./assets/images/pb_kv2.jpg" alt="이벤트2"></a></div>
-      <div class="list-item"><a href="#" target="_blank"><img src="./assets/images/pb_kv3.jpg" alt="이벤트3"></a></div>
+  <!-- //header -->
+
+  <section id="kv" class="kv">
+    <div class="kv-list slider">
+      <div class="list-item"><a href="//www.naver.com"><img src="./assets/images/pb_kv0.jpg" alt="배너1"></a></div>
+      <div class="list-item"><a href="#"><img src="./assets/images/pb_kv1.jpg" alt="배너2"></a></div>
+      <div class="list-item"><a href="#"><img src="./assets/images/pb_kv2.jpg" alt="배너3"></a></div>
+      <div class="list-item"><a href="#"><img src="./assets/images/pb_kv3.jpg" alt="배너4"></a></div>
     </div>
   </section>
   <!-- //kv -->
-  <section id="tv" class="content tv">
+
+  <section id="tmp1" class="content magazine">
     <div class="inner">
       <div class="sec-header">
-        <h2 class="main-tit">PB TV</h2>
-        <a href="#" target="_blank" class="btn btn-more" title="더보기">
-          <span>SHOW MORE</span>
+        <h3 class="main-tit">pb magazine</h3>
+        <a href="#" target="_blank" title="더보기" class="btn-more">
+          <span>show more</span>
         </a>
       </div>
       <!-- //sec-header -->
       <div class="sec-body">
-        <div class="video-area">
-          <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/xY44Ad_-clE" title="YouTube video player" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-          </div>
-        </div>
-        <div class="txt-area">
-          <div class="txt-label">
-            <a href="#">
-              <span>COMMING SOON</span>
-            </a>
-          </div>
-          <div class="txt-tit">
-            <a href="#">
-              <strong>월클 X 월클이 온다</strong>
-            </a>
-          </div>
-          <div class="txt-desc">
-            <p>온다..<br>파바에 큰거 온다...<br>파바에 큰 거물.. 온다?!👀<br>월클과 월클의 만남! COMING SOON😎</p>
-          </div>
-          <div class="btn-square -red ico-yt">
-            <a href="#">
-              <span>파바 TV 구독하기</span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- //sec-body -->
-    </div>
-  </section>
-  <section id="magazine" class="content magazine">
-    <div class="inner">
-      <div class="sec-header">
-        <h2 class="main-tit">pb magazine</h2>
-        <a href="#" target="_blank" class="btn btn-more" title="더보기">
-          <span>SHOW MORE</span>
-        </a>
-      </div>
-      <!-- //sec-header -->
-      <div class="sec-body">
-        <ul class="magazine-list slider">
-          <!-- Q. 심화 - 만약 개수가 늘어나게되면 어떻게 보이는게 가장 좋을것인가?!
-              <li class="list-item">
-              <a href="#" target="_blank">
-                <div class="img-area">
-                  <img src="./assets/images/thum-magine1.jpg" alt="섬네일1">
-                </div>
-                <div class="txt-area">
-                  <h3 class="txt-tit font-gm">논산 딸기</h3>
-                  <div class="txt-desc">논산딸기와 함께한 우리 모두가 행복한 생생 프로젝트</div>
-                </div>
-              </a>
-            </li> 
-          -->
+        <ul class="magazine-list">
           <li class="list-item">
             <a href="#" target="_blank">
               <div class="img-area">
-                <img src="./assets/images/thum-magine1.jpg" alt="섬네일1">
+                <img src="./assets/images/thum_magazine1.jpg" alt="섬네일1">
               </div>
               <div class="txt-area">
-                <h3 class="txt-tit font-gm line-clamp-1">논산 딸기</h3>
-                <div class="txt-desc line-clamp-2">논산딸기와 함께한 우리 모두가 행복한 생생 프로젝트</div>
+                <h4 class="txt-tit">논산 딸기</h4>
+                <p class="txt-desc">논산딸기와 함게한 우리 모두가 행복한 상생 프로젝트</p>
               </div>
             </a>
           </li>
           <li class="list-item">
             <a href="#" target="_blank">
               <div class="img-area">
-                <img src="./assets/images/thum-magine2.jpg" alt="섬네일2">
+                <img src="./assets/images/thum_magazine2.jpg" alt="섬네일1">
               </div>
               <div class="txt-area">
-                <h3 class="txt-tit font-gm line-clamp-1">제주도 구좌 당근</h3>
-                <div class="txt-desc line-clamp-2">구좌당근과 함께한 우리 모두가 행복한 생생 프로젝트</div>
+                <h4 class="txt-tit">논산 딸기</h4>
+                <p class="txt-desc">논산딸기와 함게한 우리 모두가 행복한 상생 프로젝트</p>
               </div>
             </a>
           </li>
           <li class="list-item">
             <a href="#" target="_blank">
               <div class="img-area">
-                <img src="./assets/images/thum-magine3.jpg" alt="섬네일3">
+                <img src="./assets/images/thum_magazine3.jpg" alt="섬네일1">
               </div>
               <div class="txt-area">
-                <h3 class="txt-tit font-gm line-clamp-1">강원도 감자빵</h3>
-                <div class="txt-desc line-clamp-2">지역농가와 우리 모두가 행복한 상생 프로젝트</div>
+                <h4 class="txt-tit">논산 딸기</h4>
+                <p class="txt-desc">논산딸기와 함게한 우리 모두가 행복한 상생 프로젝트</p>
               </div>
             </a>
           </li>
+          <!-- 추가(flex이해하기) -->
+          <!-- <li class="list-item">
+            <a href="#" target="_blank">
+              <div class="img-area">
+                <img src="./assets/images/thum_magazine1.jpg" alt="섬네일1">
+              </div>
+              <div class="txt-area">
+                <h4 class="txt-tit">논산 딸기</h4>
+                <p class="txt-desc">논산딸기와 함게한 우리 모두가 행복한 상생 프로젝트</p>
+              </div>
+            </a>
+          </li> -->
         </ul>
       </div>
       <!-- //sec-body -->
     </div>
   </section>
   <!-- //magazine -->
-  <section id="story" class="content story">
+
+  <section id="tmp2" class="content story">
     <div class="inner">
       <div class="sec-header">
-        <h2 class="main-tit">pb story</h2>
-        <a href="#" target="_blank" class="btn-more" title="더보기">
-          <span>SHOW MORE</span>
+        <!-- 제목 -->
+        <h3 class="main-tit">pb story</h3>
+        <!-- 더보기 -->
+        <a href="#" target="_blank" title="더보기" class="btn-more">
+          <span>show more</span>
         </a>
       </div>
       <!-- //sec-header -->
@@ -208,98 +182,97 @@
         <ul class="story-list">
           <li class="list-item">
             <div class="img-area">
-              <a href="#">
-                <img src="./assets/images/thum_pbstory1.jpg" alt="스토리 섬네일1">
-                <span class="img-label">PB VIDEO</span>
-                <i class="ico-video hide-text">비디오 아이콘</i>
+              <a href="//naver.com" target="_blank">
+                <!-- <a href="">테스트</a> -->
+                <img src="./assets/images/thum_pbstory1.jpg" alt="스토리">
               </a>
             </div>
             <!-- //img-area -->
             <div class="txt-area">
+              <!-- 라벨, 타이틀, 설명, 날짜 -->
               <div class="txt-label">
                 <span>bread video</span>
               </div>
-              <div class="txt-tit font-gm line-clamp-2">
-                <strong>핏(fit) 좋은 사람들의 핏(ㅋ)한 이야기, 파리핏플</strong>
+              <div class="txt-tit line-clamp-3">
+                <strong>월클 김연경 선수를 위한 파바의 특별한 선물! 영광의 비하인드 영상</strong>
               </div>
               <div class="txt-desc line-clamp-3">
-                <p>짜장의 달인으로 변신한 용디가 파바 정통 짜장면과 정면 승부를?!</p>
+                <p>추석 선물로 딱인 풍기꿀삼빵을 위한 파바와 요리용디의 여섯번째 만남!</p>
               </div>
               <div class="txt-date">
-                <span>2021-09-13</span>
+                <span>2021-09-27</span>
               </div>
             </div>
             <!-- //txt-area -->
           </li>
           <li class="list-item">
             <div class="img-area">
-              <a href="#">
-                <img src="./assets/images/thum_pbstory2.jpg" alt="스토리 섬네일2">
-                <span class="img-label">PB COOK</span>
-                <i class="ico-video hide-text">비디오 아이콘</i>
+              <a href="#" target="_blank">
+                <img src="./assets/images/thum_pbstory2.jpg" alt="스토리1">
               </a>
             </div>
             <!-- //img-area -->
             <div class="txt-area">
+              <!-- 라벨, 타이틀, 설명, 날짜 -->
               <div class="txt-label">
-                <span>bread cook</span>
+                <span>bread video</span>
               </div>
-              <div class="txt-tit font-gm line-clamp-2">
-                <strong>요리용디X정통 짜장면</strong>
+              <div class="txt-tit line-clamp-3">
+                <strong>요리용디X풍기꿀삼빵</strong>
               </div>
               <div class="txt-desc line-clamp-3">
-                <p>짜장의 달인으로 변신한 용디가 파바 정통 짜장면과 정면 승부를?!</p>
+                <p>추석 선물로 딱인 풍기꿀삼빵을 위한 파바와 요리용디의 여섯번째 만남!</p>
               </div>
               <div class="txt-date">
-                <span>2021-09-13</span>
+                <span>2021-09-27</span>
               </div>
             </div>
             <!-- //txt-area -->
           </li>
           <li class="list-item">
             <div class="img-area">
-              <a href="#">
-                <img src="./assets/images/thum_pbstory2.jpg" alt="스토리 섬네일3">
-                <span class="img-label">PB VIDEO</span>
-                <i class="ico-video hide-text">비디오 아이콘</i>
+              <a href="#" target="_blank">
+                <img src="./assets/images/thum_pbstory1.jpg" alt="스토리1">
               </a>
             </div>
             <!-- //img-area -->
             <div class="txt-area">
+              <!-- 라벨, 타이틀, 설명, 날짜 -->
               <div class="txt-label">
                 <span>bread video</span>
               </div>
-              <div class="txt-tit font-gm line-clamp-2">
-                <strong>요리용디X정통 짜장면</strong>
+              <div class="txt-tit line-clamp-3">
+                <strong>요리용디X풍기꿀삼빵</strong>
               </div>
               <div class="txt-desc line-clamp-3">
-                <p>짜장의 달인으로 변신한 용디가 파바 정통 짜장면과 정면 승부를?!</p>
+                <p>추석 선물로 딱인 풍기꿀삼빵을 위한 파바와 요리용디의 여섯번째 만남!</p>
               </div>
               <div class="txt-date">
-                <span>2021-09-13</span>
+                <span>2021-09-27</span>
               </div>
             </div>
             <!-- //txt-area -->
           </li>
           <li class="list-item">
             <div class="img-area">
-              <img src="./assets/images/thum_pbstory1.jpg" alt="스토리 섬네일4">
-              <span class="img-label">PB VIDEO</span>
-              <i class="ico-video hide-text">비디오 아이콘</i>
+              <a href="#" target="_blank">
+                <img src="./assets/images/thum_pbstory1.jpg" alt="스토리1">
+              </a>
             </div>
             <!-- //img-area -->
             <div class="txt-area">
+              <!-- 라벨, 타이틀, 설명, 날짜 -->
               <div class="txt-label">
                 <span>bread video</span>
               </div>
-              <div class="txt-tit font-gm line-clamp-2">
-                <strong>요리용디X정통 짜장면</strong>
+              <div class="txt-tit line-clamp-3">
+                <strong>요리용디X풍기꿀삼빵</strong>
               </div>
               <div class="txt-desc line-clamp-3">
-                <p>짜장의 달인으로 변신한 용디가 파바 정통 짜장면과 정면 승부를?!</p>
+                <p>추석 선물로 딱인 풍기꿀삼빵을 위한 파바와 요리용디의 여섯번째 만남!</p>
               </div>
               <div class="txt-date">
-                <span>2021-09-13</span>
+                <span>2021-09-27</span>
               </div>
             </div>
             <!-- //txt-area -->
@@ -308,49 +281,40 @@
       </div>
       <!-- //sec-body -->
     </div>
-
   </section>
   <!-- //story -->
 
-  <section id="promotion" class="content promotion">
+  <section id="tmp3" class="content promotion">
     <div class="inner">
       <div class="sec-header">
-        <h2 class="main-tit">promotion</h2>
-        <a href="#" target="_blank" class="btn btn-more" title="더보기">
-          <span>SHOW MORE</span>
+        <!-- 제목 -->
+        <h3 class="main-tit">pb promotion</h3>
+        <!-- 더보기 -->
+        <a href="#" target="_blank" title="더보기" class="btn-more">
+          <span>show more</span>
         </a>
       </div>
       <!-- //sec-header -->
       <div class="sec-body">
-        <!-- NOTE
-          slide 사용할 경우라면, ul li 사용하는거보다 div 사용하는게 더 good
-          slide 사용할 경우라면, 없던 태그가 slide.js에서 알아서 들어가기 때문에, promiton-list 영역과 list-item 에 내가 골격잡은 layout css가 제대로 안잡힐 수 있으니 슬라이드를 사용할 경우, 슬라이드에서 잡을 수 있는건 슬라이드 라이브러리에서 먼저 처리해주는 것이 좋다. 주의해서 해야한다.
-        -->
         <div class="promotion-list slider">
-          <!-- [D] badge 상태 변경
+          <!-- [D] badge 상태변경
             state-live : 진행중(생략가능)
             state-done : 종료
-            state-announce : 당첨자 발표
-            (심화: 상태 구분 공유하기)
+            state-announce : 당첨자발표
           -->
-          <div class="list-item state-live">
+          <div class="list-item">
             <div class="img-area">
-              <a href="#">
-                <img src="./assets/images/thum_promo1.jpg" alt="프로모션 섬네일">
+              <!-- 클릭, 이미지, 마크 -->
+              <a href="//www.naver.com" target="_blank">
+                <img src="./assets/images/thum_promo1.jpg" alt="프로모션배너1">
                 <span class="badge"></span>
               </a>
             </div>
             <!-- //img-area -->
             <div class="txt-area">
-              <!-- NOTE: a태그 안에 a태그 있으면 안된다! -->
-              <div class="txt-date">
-                <a href="#">
-                  <span>2021-08-27 ~ 2021-09-13</span>
-                </a>
-              </div>
               <div class="txt-tit">
                 <a href="#">
-                  <strong>풍요로운 한가위! 행복상생 프로젝트</strong>
+                  <strong>김연경이 파바에 왔다!</strong>
                 </a>
               </div>
               <div class="btn-more">
@@ -359,50 +323,20 @@
             </div>
             <!-- //txt-area -->
           </div>
-          <!-- //list-item -->
-          <div class="list-item state-done">
-            <div class="img-area">
-              <a href="#">
-                <img src="./assets/images/thum_promo2.jpg" alt="프로모션 섬네일">
-                <span class="badge"></span>
-              </a>
-            </div>
-            <!-- //img-area -->
-            <div class="txt-area">
-              <div class="txt-date">
-                <a href="#">
-                  <span>2021-08-27 ~ 2021-09-13</span>
-                </a>
-              </div>
-              <div class="txt-tit">
-                <a href="#">
-                  <strong>9월 13일은 금요일!</strong>
-                </a>
-              </div>
-              <div class="btn-more">
-                <a href="#">READ MORE</a>
-              </div>
-            </div>
-            <!-- //txt-area -->
-          </div>
-          <!-- //list-item -->
+          <!-- 1 -->
           <div class="list-item state-announce">
             <div class="img-area">
-              <a href="#">
-                <img src="./assets/images/thum_promo3.jpg" alt="프로모션 섬네일">
+              <!-- 클릭, 이미지, 마크 -->
+              <a href="//www.naver.com" target="_blank">
+                <img src="./assets/images/thum_promo2.jpg" alt="프로모션배너1">
                 <span class="badge"></span>
               </a>
             </div>
             <!-- //img-area -->
             <div class="txt-area">
-              <div class="txt-date">
-                <a href="#">
-                  <span>2021-08-27 ~ 2021-09-13</span>
-                </a>
-              </div>
               <div class="txt-tit">
                 <a href="#">
-                  <strong>9월 13일은 금요일!</strong>
+                  <strong>김연경이 파바에 왔다!</strong>
                 </a>
               </div>
               <div class="btn-more">
@@ -411,25 +345,20 @@
             </div>
             <!-- //txt-area -->
           </div>
-          <!-- //list-item -->
-          <div class="list-item state-live">
+          <!-- 2 -->
+          <div class="list-item state-done">
             <div class="img-area">
-              <a href="#">
-                <img src="./assets/images/thum_promo1.jpg" alt="프로모션 섬네일">
+              <!-- 클릭, 이미지, 마크 -->
+              <a href="//www.naver.com" target="_blank">
+                <img src="./assets/images/thum_promo3.jpg" alt="프로모션배너1">
                 <span class="badge"></span>
               </a>
             </div>
             <!-- //img-area -->
             <div class="txt-area">
-              <!-- NOTE: a태그 안에 a태그 있으면 안된다! -->
-              <div class="txt-date">
-                <a href="#">
-                  <span>2021-08-27 ~ 2021-09-13</span>
-                </a>
-              </div>
               <div class="txt-tit">
                 <a href="#">
-                  <strong>9월 13일은 금요일!</strong>
+                  <strong>김연경이 파바에 왔다!</strong>
                 </a>
               </div>
               <div class="btn-more">
@@ -438,25 +367,20 @@
             </div>
             <!-- //txt-area -->
           </div>
-          <!-- //list-item -->
-          <div class="list-item state-live">
+          <!-- 3 -->
+          <div class="list-item state-announce">
             <div class="img-area">
-              <a href="#">
-                <img src="./assets/images/thum_promo2.jpg" alt="프로모션 섬네일">
+              <!-- 클릭, 이미지, 마크 -->
+              <a href="//www.naver.com" target="_blank">
+                <img src="./assets/images/thum_promo1.jpg" alt="프로모션배너1">
                 <span class="badge"></span>
               </a>
             </div>
             <!-- //img-area -->
             <div class="txt-area">
-              <!-- NOTE: a태그 안에 a태그 있으면 안된다! -->
-              <div class="txt-date">
-                <a href="#">
-                  <span>2021-08-27 ~ 2021-09-13</span>
-                </a>
-              </div>
               <div class="txt-tit">
                 <a href="#">
-                  <strong>9월 13일은 금요일!</strong>
+                  <strong>김연경이 파바에 왔다!</strong>
                 </a>
               </div>
               <div class="btn-more">
@@ -465,7 +389,29 @@
             </div>
             <!-- //txt-area -->
           </div>
-          <!-- //list-item -->
+          <!-- 4 -->
+          <div class="list-item state-announce">
+            <div class="img-area">
+              <!-- 클릭, 이미지, 마크 -->
+              <a href="//www.naver.com" target="_blank">
+                <img src="./assets/images/thum_promo1.jpg" alt="프로모션배너1">
+                <span class="badge"></span>
+              </a>
+            </div>
+            <!-- //img-area -->
+            <div class="txt-area">
+              <div class="txt-tit">
+                <a href="#">
+                  <strong>김연경이 파바에 왔다!</strong>
+                </a>
+              </div>
+              <div class="btn-more">
+                <a href="#">READ MORE</a>
+              </div>
+            </div>
+            <!-- //txt-area -->
+          </div>
+          <!-- 5 -->
         </div>
       </div>
       <!-- //sec-body -->
@@ -473,12 +419,14 @@
   </section>
   <!-- //promotion -->
 
-  <section id="product" class="content product">
+  <section id="tmp4" class="content product">
     <div class="inner">
       <div class="sec-header">
-        <h2 class="main-tit">products</h2>
-        <a href="#" target="_blank" class="btn btn-more" title="더보기">
-          <span>SHOW MORE</span>
+        <!-- 제목 -->
+        <h3 class="main-tit">pb product</h3>
+        <!-- 더보기 -->
+        <a href="#" target="_blank" title="더보기" class="btn-more">
+          <span>show more</span>
         </a>
       </div>
       <!-- //sec-header -->
@@ -486,122 +434,214 @@
         <div class="product-list slider">
           <div class="list-item">
             <div class="img-area">
-              <a href="#">
-                <img src="//via.placeholder.com/300x300/999999?text=Product" alt="상품 섬네일">
+              <a href="#" target="_blank">
+                <img src="./assets/images/thum_product1.jpg" alt="제품1">
               </a>
             </div>
             <!-- //img-area -->
             <div class="txt-area">
-              <div class="txt-tit">
-                <a href="#">
-                  <strong>풍요로운 한가위! 행복상생 프로젝트</strong>
-                </a>
-              </div>
+              <a href="#" target="_blank">
+                <p class="txt-tit">그대로 토스트 플러스</p>
+              </a>
             </div>
             <!-- //txt-area -->
-          </div>
+          </div> 
           <!-- //list-item -->
           <div class="list-item">
             <div class="img-area">
-              <a href="#">
-                <img src="//via.placeholder.com/300x300/999999?text=Product" alt="상품 섬네일">
-                <span class="badge"></span>
+              <a href="#" target="_blank">
+                <img src="./assets/images/thum_product1.jpg" alt="제품1">
               </a>
             </div>
             <!-- //img-area -->
             <div class="txt-area">
-              <div class="txt-tit">
-                <a href="#">
-                  <strong>9월 13일은 월요일!</strong>
-                </a>
-              </div>
+              <a href="#" target="_blank">
+                <p class="txt-tit">그대로 토스트 플러스</p>
+              </a>
             </div>
             <!-- //txt-area -->
-          </div>
+          </div> 
           <!-- //list-item -->
           <div class="list-item">
             <div class="img-area">
-              <a href="#">
-                <img src="//via.placeholder.com/300x300/999999?text=Product" alt="상품 섬네일">
+              <a href="#" target="_blank">
+                <img src="./assets/images/thum_product1.jpg" alt="제품1">
               </a>
             </div>
             <!-- //img-area -->
             <div class="txt-area">
-              <div class="txt-tit">
-                <a href="#">
-                  <strong>9월 13일은 화요일!</strong>
-                </a>
-              </div>
+              <a href="#" target="_blank">
+                <p class="txt-tit">그대로 토스트 플러스</p>
+              </a>
             </div>
             <!-- //txt-area -->
-          </div>
+          </div> 
           <!-- //list-item -->
           <div class="list-item">
             <div class="img-area">
-              <a href="#">
-                <img src="//via.placeholder.com/300x300/999999?text=Product" alt="상품 섬네일">
+              <a href="#" target="_blank">
+                <img src="./assets/images/thum_product1.jpg" alt="제품1">
               </a>
             </div>
             <!-- //img-area -->
             <div class="txt-area">
-              <div class="txt-tit">
-                <a href="#">
-                  <strong>9월 13일은 수요일!</strong>
-                </a>
-              </div>
+              <a href="#" target="_blank">
+                <p class="txt-tit">그대로 토스트 플러스</p>
+              </a>
             </div>
             <!-- //txt-area -->
-          </div>
+          </div> 
           <!-- //list-item -->
           <div class="list-item">
             <div class="img-area">
-              <a href="#">
-                <img src="//via.placeholder.com/300x300/999999?text=Product" alt="상품 섬네일">
+              <a href="#" target="_blank">
+                <img src="./assets/images/thum_product1.jpg" alt="제품1">
               </a>
             </div>
             <!-- //img-area -->
             <div class="txt-area">
-              <div class="txt-tit">
-                <a href="#">
-                  <strong>9월 13일은 목요일!</strong>
-                </a>
-              </div>
+              <a href="#" target="_blank">
+                <p class="txt-tit">그대로 토스트 플러스</p>
+              </a>
             </div>
             <!-- //txt-area -->
-          </div>
+          </div> 
           <!-- //list-item -->
           <div class="list-item">
             <div class="img-area">
-              <a href="#">
-                <img src="//via.placeholder.com/300x300/999999?text=Product" alt="상품 섬네일">
+              <a href="#" target="_blank">
+                <img src="./assets/images/thum_product1.jpg" alt="제품1">
               </a>
             </div>
             <!-- //img-area -->
             <div class="txt-area">
-              <div class="txt-tit">
-                <a href="#">
-                  <strong>9월 13일은 금요일!</strong>
-                </a>
-              </div>
+              <a href="#" target="_blank">
+                <p class="txt-tit">그대로 토스트 플러스</p>
+              </a>
             </div>
             <!-- //txt-area -->
-          </div>
+          </div> 
           <!-- //list-item -->
         </div>
       </div>
       <!-- //sec-body -->
     </div>
+  </section>
+  <!-- //product -->
 
-  </section>
-  <section id="notice" class="content notice">
-    <div class="inner">
-      <div class="sec-header sr-only">
-        <h2 class="main-tit">notice</h2>
-      </div>
-      <!-- //sec-header -->
-      <div class="sec-body"></div>
-      <!-- //sec-body -->
+  <section class="content notice">
+    <div class="sec-body">
+      <ul class="notice-list">
+        <li class="list-item">
+          <a href="//www.paris.co.kr" target="_blank">
+            <span class="label">고객센터</span>
+            <p class="txt-tit">고객의 소리를 적극 경청하고 고객만족 향상 활동을 지속적으로 실천합니다.</p>
+            <i class="ico-arr"></i>
+          </a>
+        </li>
+        <li class="list-item">
+          <a href="//www.paris.co.kr" target="_blank">
+            <span class="label">제휴카드안내</span>
+            <p class="txt-tit">해피포인트와 제휴카드 정보를 확인하세요.</p>
+            <i class="ico-arr"></i>
+          </a>
+        </li>
+        <li class="list-item">
+          <a href="//www.paris.co.kr" target="_blank">
+            <span class="label">공지사항</span>
+            <p class="txt-tit">파리바게뜨 공지내용을 확인하세요.</p>
+            <i class="ico-arr"></i>
+          </a>
+        </li>
+      </ul>
     </div>
+    <!-- //sec-body -->
   </section>
+  <!-- //notice -->
+
+  <footer class="ft">
+    <div class="inner">
+      <div class="box-wrap">
+        <div class="box">
+          <h6 class="txt-tit">info</h6>
+          <div class="box-body">
+            <ul class="info-list">
+              <li><a href="#">info 내용1</a></li>
+              <li><a href="#">info 내용2</a></li>
+              <li><a href="#">info 내용3</a></li>
+              <li><a href="#">info 내용4</a></li>
+              <li><a href="#">info 내용5</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- //info -->
+        <div class="box">
+          <h6 class="txt-tit">contact us</h6>
+          <div class="box-body">
+            <ul class="contact-list">
+              <li><a href="#">contact 내용1</a></li>
+              <li><a href="#">contact 내용2</a></li>
+              <li><a href="#">contact 내용3</a></li>
+              <li>contact 내용4</li>
+              <li><a href="#">contact 내용5</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- //contact -->
+        <div class="box">
+          <h6 class="txt-tit sr-only">brands</h6>
+          <div class="box-body">
+            <ul class="brand-list">
+              <li><a href="#"><img src="./assets/images/ft_brand_logo1.png" alt="브랜드1"></a></li>
+              <li><a href="#"><img src="./assets/images/ft_brand_logo2.png" alt="브랜드2"></a></li>
+              <li><a href="#"><img src="./assets/images/ft_brand_logo3.png" alt="브랜드3"></a></li>
+              <li><a href="#"><img src="./assets/images/ft_brand_logo4.png" alt="브랜드4"></a></li>
+              <li><a href="#"><img src="./assets/images/ft_brand_logo5.png" alt="브랜드5"></a></li>
+              <li><a href="#"><img src="./assets/images/ft_brand_logo6.png" alt="브랜드6"></a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- //brands -->
+        <div class="box">
+          <h6 class="txt-tit">follow us</h6>
+          <div class="box-body">
+            <ul class="sns-list">
+              <li class="ico-fa"><a href="#"><img src="./assets/images/sns_ico_01.svg" alt="페이스북"></a></li>
+              <li class="ico-in"><a href="#"><img src="./assets/images/sns_ico_02.svg" alt="인스타"></a></li>
+              <li class="ico-yt"><a href="#"><img src="./assets/images/sns_ico_03.svg" alt="유튜브"></a></li>
+            </ul>
+            <!-- //sns-list -->
+            <div class="family-site">
+              <button class="select-label">Family site</button>
+              <ul class="select-list">
+                <li>
+                  <a href="//paris.co.kr" target="_blank">
+                    패밀리사이트1
+                  </a>
+                </li>
+                <li><a href="//paris.co.kr" target="_blank">패밀리사이트2</a></li>
+                <li><a href="//paris.co.kr" target="_blank">패밀리사이트3</a></li>
+                <li><a href="//paris.co.kr" target="_blank">패밀리사이트4</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- //follow -->
+      </div>
+      <!-- //box-wrap -->
+      <ul class="ft-menu">
+        <li><a href="#" target="_blank">이용약관</a></li>
+        <li><a href="#" target="_blank">개인정보처리방침</a></li>
+        <li><a href="#" target="_blank">이메일무단수집거부</a></li>
+        <li><a href="#" target="_blank">영상정보처리기기운영관리방침</a></li>
+      </ul>
+      <!-- //ft-meun -->
+      <!-- <div class="copyright"> All Rights Reserved © PARIS BAGUETTE, PARIS CROISSANT CO., LTD. 경기도 성남시 중원구 상대원동 사기막골로 31번길 18 (주) 파리크라상</div> -->
+    </div>
+    <!-- //inner -->
+    <div class="copyright">
+      All Rights Reserved © PARIS BAGUETTE, PARIS CROISSANT CO., LTD. 경기도 성남시 중원구 상대원동 사기막골로 31번길 18 (주) 파리크라상
+    </div>
+  </footer>  
 </body>
 </html>
